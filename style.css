@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
   color: #ffffff;
   min-height: 100vh;
@@ -52,6 +52,8 @@ section {
 
 form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 10px;
   width: 100%;
   max-width: 400px;
@@ -59,7 +61,7 @@ form {
 
 input[type="text"] {
   flex: 1;
-  padding: 12px 20px;
+  padding: 24px 20px;
   border: none;
   border-radius: 25px;
   background: rgba(255, 255, 255, 0.9);
@@ -94,6 +96,10 @@ button[type="submit"]:hover {
 }
 
 #card-pokemon {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #ffffff;
   border-radius: 20px;
   padding: 30px;
@@ -107,7 +113,7 @@ button[type="submit"]:hover {
 }
 
 #card-pokemon::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -125,9 +131,12 @@ button[type="submit"]:hover {
 }
 
 #pokemon-code {
-  font-size: 1rem;
-  color: #666;
+  font-size: 1.5rem;
+  color: #1b1b1b;
   margin-bottom: 20px;
+  background-color: #0f172a1a;
+  border-radius: 12px;
+  width: 70%;
 }
 
 #pokemon-img {
@@ -137,6 +146,32 @@ button[type="submit"]:hover {
   margin: 0 auto;
   display: block;
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+#error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#loading {
+  width: 50px;
+  height: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid #eab308;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 20px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 768px) {

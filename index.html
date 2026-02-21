@@ -1,32 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokedex</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/960px-Pok%C3%A9_Ball_icon.svg.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Pokedex</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/960px-Pok%C3%A9_Ball_icon.svg.png" alt="" id="pokelogo">
+      <h1>Pokedex</h1>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/960px-Pok%C3%A9_Ball_icon.svg.png"
+        alt=""
+        id="pokelogo"
+      />
     </header>
 
-
     <section>
-        <form action="">
-            <input type="text" name="" id="name">
-            <button type="submit" id="btn-submit"></button>
-        </form>
+      <form action="">
+        <input
+          type="text"
+          name=""
+          id="name"
+          placeholder="Type a pokemon name"
+        />
+        <p id="error-message"></p>
+        <button type="submit" id="btn-submit">Search</button>
+      </form>
 
+      <div id="loading" class="hidden"></div>
 
-        <div id="card-pokemon">
-            <h2 id="pokemon-name"></h2>
-            <p id="pokemon-code"></p>
-            <img src="" alt="" id="pokemon-img">
-        </div>
+      <div id="card-pokemon">
+        <h2 id="pokemon-name"></h2>
+        <p id="pokemon-code"></p>
+        <img src="" id="pokemon-img" />
+      </div>
     </section>
-    
+
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
